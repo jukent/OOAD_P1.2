@@ -1,5 +1,12 @@
 package src;
 
+/**
+ * Reader
+ * 
+ * Methods:
+ * read()
+ */
+
 import java.util.Scanner;
 
 public class Reader {
