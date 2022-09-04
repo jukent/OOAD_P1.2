@@ -3,7 +3,7 @@
 Enter a string: 
 Julia Kent
 Cleaning, Sorting, and Making a Palindrome . . .
-AEIJKLNTUTNLKJIEA
+UTNLKJIEAEIJKLNTU
 
 ---------------------------------------------
 
@@ -12,4 +12,4 @@ AEIJKLNTUTNLKJIEA
 Enter a string: 
 Bruce
 Cleaning, Sorting, and Making a Palindrome . . .
-BCERURECB
+URECBCERU
