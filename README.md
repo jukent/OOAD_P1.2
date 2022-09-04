@@ -1,5 +1,5 @@
-# 5448OOAD_P1.2
-Project 1.2 Homework for 5448:OOAD :: 1) Numerical Entry and Statistical Analysis and 2) String Manipulation
+# OOAD_P1.2
+Project 1.2 Homework for CompSci5448 Object Oriented Analysis and Design :: 1) Numerical Entry and Statistical Analysis and 2) String Manipulation
 
 ## Project 1: Numerical Entry and Statistical Analysis
 
