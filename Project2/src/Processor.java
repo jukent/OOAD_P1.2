@@ -4,7 +4,10 @@ package src;
  * Reader
  * 
  * Methods:
- * read()
+ * clean()
+ * sort()
+ * make_palindrome()
+ * process()
  */
 
 import java.util.Arrays;
