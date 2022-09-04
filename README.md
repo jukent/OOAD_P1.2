@@ -1,5 +1,8 @@
 # OOAD_P1.2
-Project 1.2 Homework for CompSci5448 Object Oriented Analysis and Design :: 1) Numerical Entry and Statistical Analysis and 2) String Manipulation
+Project 1.2 for CompSci:5448 Object Oriented Analysis and Design
+
+Author: **Julia Kent** \
+Java Version: **17.0.4.1**
 
 ## Project 1: Numerical Entry and Statistical Analysis
 
@@ -27,6 +30,7 @@ Project 1.2 Homework for CompSci5448 Object Oriented Analysis and Design :: 1) N
 This project accepts user input from the command line to generate a list of real numbers and performs 8 statistical analysis operations on this list. The statistical results are printed to the command line.
 
 NOTES::
+
 My first main challenge was the `while` loop in the `Reader` Class. I tried many different combinations of conditions before I got the code to exit when a blank line is entered. After that, it wasn't too hard to make the code more robust by adding exception handling for the user entering values other than floats or never having entered any values at all.
 
 My next challenge was figuring out the structure of the entire project, instead of just one method, and making sure I understood how information was passed btween Classes. This was my first Java project, so this behavior and explicit typing was my biggest challenge. Luckily the extensions on Visual Studio Code were very helpful! I still don't have a complete grasp of when methods should be static, or if I should have leveraged making them private in this workflow.
