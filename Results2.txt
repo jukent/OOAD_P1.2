@@ -6,7 +6,6 @@ Cleaning, Sorting, and Making a Palindrome . . .
 UTNLKJIEAEIJKLNTU
 
 ---------------------------------------------
-
 // Results with Bruce
 
 Enter a string: 
