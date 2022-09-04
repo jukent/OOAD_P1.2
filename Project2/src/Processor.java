@@ -77,20 +77,29 @@ public class Processor {
      * This method does not check if the string is already a Paindrome, or if it can be made into a Palindrome
      * with fewer additions.
      * 
+     * The desired palindrome direction was unclear to me, but based on comments on Piazza we want
+     * make_palindrome('Tivoli') -> 'iloveiTivoli'
+     * not:: make_palindrome('Tivoli') -> 'TivoliloveiT'
+     * 
      * Example:
-     * make_palindrome('Tivoli') -> 'TivoliloveiT'
+     * make_palindrome('Tivoli') -> 'iloveiTivoli'
      * 
-     * Changed method name from assigned `palindrome` to make it a verb.
+     * Changed method name from `palindrome()` to make it a verb
      * 
-     * Learned how to do reverse loops from Mkyong "Java - Reverse loop versus Forwared loop in performance"
-     * https://mkyong.com/java/reverse-loop-versus-forward-loop-in-performance-java/
      */
     private static String make_palindrome(String str) {    
         int length = str.length();
-        for (int i = length - 2; i >= 0; i--) {
-            str += str.charAt(i);
+
+        // Since adding characters to beginning of string, need to make separate String objects 
+        // so that `str.charAt(i)` doesn't end up in a loop pointing to the same character.
+        // i.e. BCERU -> CCCCBCERU
+        String str_palindromed = new String();
+
+        for (int i = 1; i <= length-1; i++) {
+            str_palindromed = str.charAt(i) + str_palindromed; // instead of += because want to add character to beginning
         }
-        return str;
+        str_palindromed += str; //Add original characters
+        return str_palindromed;
     }
 
 
