@@ -35,7 +35,7 @@ public class Processor {
      * 
      * `str_cleaned.replaceAll(" ", "")` Doesn't seem to work for me so I'm going to use an if test.
      */
-    public static String clean(String str) {   
+    private static String clean(String str) {   
         String str_cleaned = new String();
         for (int i =0; i< str.length(); i++) {
             char char_upper = Character.toUpperCase(str.charAt(i));
@@ -59,7 +59,7 @@ public class Processor {
      * Learned that this was as simple as calling `Arrays.sort()` from TutorialsPoint
      * https://www.tutorialspoint.com/how-to-sort-a-string-in-java-alphabetically-in-java
      */
-    public static String sort(String str) {   
+    private static String sort(String str) {   
         char[] charArray = str.toCharArray();
         Arrays.sort(charArray); 
         String str_sorted = new String(charArray);
@@ -85,7 +85,7 @@ public class Processor {
      * Learned how to do reverse loops from Mkyong "Java - Reverse loop versus Forwared loop in performance"
      * https://mkyong.com/java/reverse-loop-versus-forward-loop-in-performance-java/
      */
-    public static String make_palindrome(String str) {    
+    private static String make_palindrome(String str) {    
         int length = str.length();
         for (int i = length - 2; i >= 0; i--) {
             str += str.charAt(i);
