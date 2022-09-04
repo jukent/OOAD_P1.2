@@ -24,6 +24,8 @@ Project 1.2 Homework for 5448:OOAD :: 1) Numerical Entry and Statistical Analysi
    |   | - main()
 </pre>
 
+This project accepts user input from the command line to generate a list of real numbers and performs 8 statistical analysis operations on this list. The statistical results are printed to the command line.
+
 NOTES::
 My first main challenge was the `while` loop in the `Reader` Class. I tried many different combinations of conditions before I got the code to exit when a blank line is entered. After that, it wasn't too hard to make the code more robust by adding exception handling for the user entering values other than floats or never having entered any values at all.
 
@@ -46,10 +48,22 @@ Results from the console are in `Results1.txt` for 4 different scenarios: Early 
 
 <pre>
 - Project2/src/
-   | - ClassA.java
-   |   | - 
-   | - ClassB.java
-   |   | - 
+   | - Reader.java
+   |   | - read()
+   | - Processor.java
+   |   | - clean()
+   |   | - sort()
+   |   | - make_palindrome()
    | - Main.java
    |   | - main()
 </pre>
+
+This project accepts a user-input string and performs cleaning (capitalization and white space removal), alphabetical sorting, and palindrome-making on that string. The final string is pringed to the command line.
+
+NOTES::
+
+I assumed that when the assignment said to make a class `Processor` with 3 methods but lists 4 (read, sort, clean, palindrome). That the `read` method can be safely removed into a separate `Reader` class. I also changed the name of palindrome to be a verb (`make_palindrome()`) because that is how I was taught to name methods.
+
+This project was much easier than Project 1, perhaps because I learned so much during Project 1 about Java! The hardest part was getting the `clean()` method to remove white space. I thought `str_cleaned.replaceAll(" ", "")` would do the trick, but it didn't for me, so I used an if-statement.
+
+The `clean()`, `sort()`, and `make_palindrome()` functions are all robust in that they accept strings with any number of upper/lower case characters, numbers, spaces, and special characters. They are also designed so that they all accept `String` input and are not dependent on the results from each other, although they are functionally executed in sequence in the `process()` method.
