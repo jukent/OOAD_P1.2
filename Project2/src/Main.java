@@ -7,7 +7,7 @@ public class Main {
      * and prints the final string to the console output.
      */
     public static void main(String args[]) {
-        Reader reader = new Reader();
+        StringReader reader = new StringReader();
         String str = reader.read();
 
         System.out.println("Cleaning, Sorting, and Making a Palindrome . . .");

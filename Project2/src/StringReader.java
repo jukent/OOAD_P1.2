@@ -1,7 +1,7 @@
 package src;
 
 /**
- * Reader
+ * StringReader
  * 
  * Methods:
  * read()
@@ -9,7 +9,7 @@ package src;
 
 import java.util.Scanner;
 
-class Reader {
+class StringReader {
     
   
     /**
