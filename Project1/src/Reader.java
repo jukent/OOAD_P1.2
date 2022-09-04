@@ -13,11 +13,11 @@ import java.util.ArrayList;
 public class Reader {
   
   /**
-   * @param 
    * @return userdata ArrayList<Float>
    * 
-   * This function repeatedly queries the user to input any real number and appends 
-   * that number to an Array List.
+   * This method repeatedly queries the user to input any real number and appends 
+   * that number to an Array List of Floats.
+   
    * Querying ends when the user enters a blank line or any value that cannot be 
    * converted to a float. The program exits if the user generated ArrayList has no
    * entries.
