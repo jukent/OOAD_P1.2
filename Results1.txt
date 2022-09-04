@@ -1,0 +1,121 @@
+// Example of early exit
+
+This program generates a list of user input numbers. Numbers are added one at a time. To end the list enter a blank line.
+Enter a real number: 
+
+User exited list generation with: []
+The list cannot be empty. Please try again.
+
+---------------------------------------------
+// Example of no mode
+
+This program generates a list of user input numbers. Numbers are added one at a time. To end the list enter a blank line.
+Enter a real number: 
+1
+Current list: [1.0]
+Enter a real number: 
+2
+Current list: [1.0, 2.0]
+Enter a real number: 
+3
+Current list: [1.0, 2.0, 3.0]
+Enter a real number: 
+4
+Current list: [1.0, 2.0, 3.0, 4.0]
+Enter a real number: 
+5
+Current list: [1.0, 2.0, 3.0, 4.0, 5.0]
+Enter a real number: 
+
+User exited list generation with: [1.0, 2.0, 3.0, 4.0, 5.0]
+Beginning statistical analysis of list . . .
+Median: 3.0
+Mean: 3.0
+Mode: There is no mode.
+Variance: 2.0
+Standard Deviation: 1.4142135623730951
+Minimum: 1.0
+Maximum: 5.0
+Maximum Occurances: Value 4.0, Count 1
+Maximum Occurances: Value 3.0, Count 1
+Maximum Occurances: Value 1.0, Count 1
+Maximum Occurances: Value 2.0, Count 1
+Maximum Occurances: Value 5.0, Count 1
+
+---------------------------------------------
+// Example of one mode
+
+This program generates a list of user input numbers. Numbers are added one at a time. To end the list enter a blank line.
+Enter a real number: 
+1
+Current list: [1.0]
+Enter a real number: 
+2
+Current list: [1.0, 2.0]
+Enter a real number: 
+3
+Current list: [1.0, 2.0, 3.0]
+Enter a real number: 
+4
+Current list: [1.0, 2.0, 3.0, 4.0]
+Enter a real number: 
+5
+Current list: [1.0, 2.0, 3.0, 4.0, 5.0]
+Enter a real number: 
+8
+Current list: [1.0, 2.0, 3.0, 4.0, 5.0, 8.0]
+Enter a real number: 
+8
+Current list: [1.0, 2.0, 3.0, 4.0, 5.0, 8.0, 8.0]
+Enter a real number: 
+
+User exited list generation with: [1.0, 2.0, 3.0, 4.0, 5.0, 8.0, 8.0]
+Beginning statistical analysis of list . . .
+Median: 4.0
+Mean: 4.428571
+Mode: 8.0
+Variance: 6.5306125
+Standard Deviation: 2.5555063037917716
+Minimum: 1.0
+Maximum: 8.0
+Maximum Occurances: Value 8.0, Count 2
+
+---------------------------------------------
+// Example of multiple modes and exiting with a false entry
+
+This program generates a list of user input numbers. Numbers are added one at a time. To end the list enter a blank line.
+Enter a real number: 
+1.1
+Current list: [1.1]
+Enter a real number: 
+2.22
+Current list: [1.1, 2.22]
+Enter a real number: 
+4
+Current list: [1.1, 2.22, 4.0]
+Enter a real number: 
+4
+Current list: [1.1, 2.22, 4.0, 4.0]
+Enter a real number: 
+5
+Current list: [1.1, 2.22, 4.0, 4.0, 5.0]
+Enter a real number: 
+5
+Current list: [1.1, 2.22, 4.0, 4.0, 5.0, 5.0]
+Enter a real number: 
+99
+Current list: [1.1, 2.22, 4.0, 4.0, 5.0, 5.0, 99.0]
+Enter a real number: 
+exit
+User input must be a number. Exiting list generation with: [1.1, 2.22, 4.0, 4.0, 5.0, 5.0, 99.0]
+Beginning statistical analysis of list . . .
+Median: 4.0
+Mean: 17.188572
+Modes: [4.0, 5.0]
+Variance: 1117.2871
+Standard Deviation: 33.42584493135514
+Minimum: 1.1
+Maximum: 99.0
+Maximum Occurances: Value 4.0, Count 2
+Maximum Occurances: Value 5.0, Count 2
+
