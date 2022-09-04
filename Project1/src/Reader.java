@@ -14,7 +14,7 @@ public class Reader {
   
   /**
    * @param 
-   * @return userdata
+   * @return userdata ArrayList<Float>
    * 
    * This function repeatedly queries the user to input any real number and appends 
    * that number to an Array List.
