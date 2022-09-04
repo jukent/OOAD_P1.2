@@ -29,6 +29,10 @@ Java Version: **17.0.4.1**
 
 This project accepts user input from the command line to generate a list of real numbers and performs 8 statistical analysis operations on this list. The statistical results are printed to the command line.
 
+Results from the console are in **`Results1.txt`** for 4 different scenarios: Early exit by user, no mode, one mode, multiple modes (and exiting with a bad character).
+
+Code citation and resources used or adapted are listed in the docstring before each relevant method.
+
 NOTES::
 
 My first main challenge was the `while` loop in the `Reader` Class. I tried many different combinations of conditions before I got the code to exit when a blank line is entered. After that, it wasn't too hard to make the code more robust by adding exception handling for the user entering values other than floats or never having entered any values at all.
@@ -40,10 +44,6 @@ The next challenge was the `Analyzer` Class. This file is rather long, and I con
 I computed all of the operations on the `ArrayList` type rather than converting to an `Array`. In some of my searching online, I saw a lot of suggestions to convert to an Array before doing math operators. From what I could gather this is because the mutable nature of an `ArrayList` makes it great for appending user data, but a little slower when performing operations that do not require it to still be mutable. However, I couldn't get those methods to work for me and since this was my first Java code I thought I could stick with the types that I did have a good grasp on. Similarly, I didn't do a recursive sum method because I did not fully understand it.
 
 The trickiest operator to execute was the `calc_max_occurances()` and related methods. I ended up splitting this into parts. First was calculating the occurances of the set of all user-input numbers in a `HashMap` (`calc_occurances()`) because I needed to return pairs of values (value and count) and this did the trick (even if the **key** wa(s my `value` and my **value** was count which is potentially confusing). Then I created a new `HashMap` only with the numbers that have the maximum count (could be as many maximum occurances as appear in the data) (`calc_max_occurances()`). And finally printed the `HashMap` with each maximum occurance having a new line of output (`print_max_occurances()`) . The mode (`calc_mode()`) then grabbed the values from this `HashMap`.
-
-Code citation and resources used or adapted are listed in the docstring before each relevant method.
-
-Results from the console are in `Results1.txt` for 4 different scenarios: Early exit by user, no mode, one mode, multiple modes (and exiting with a bad character).
 
 -----------------------------
 
@@ -63,6 +63,10 @@ Results from the console are in `Results1.txt` for 4 different scenarios: Early 
 </pre>
 
 This project accepts a user-input string and performs cleaning (capitalization and white space removal), alphabetical sorting, and palindrome-making on that string. The final string is pringed to the command line.
+
+Results from the console are in **`Results2.txt`** for 2 different scenarios: user entered "Bruce" and user entered "Julia Kent".
+
+Code citation and resources used or adapted are listed in the docstring before each relevant method.
 
 NOTES::
 
