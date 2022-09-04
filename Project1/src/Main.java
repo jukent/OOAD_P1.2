@@ -21,7 +21,10 @@ class Main{
      * Results are printed to the console.
      */
     public static void main(String args[]) {
-            ArrayList<Float> userdata = src.Reader.get_userdata();
-            src.Analyzer.analyze(userdata);
+        Reader reader = new Reader();
+        ArrayList<Float> userdata = reader.get_userdata();
+
+        Analyzer analyzer = new Analyzer();
+        analyzer.analyze(userdata);
     }
 }

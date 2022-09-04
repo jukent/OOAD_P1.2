@@ -10,7 +10,7 @@ package src;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Reader {
+class Reader {
   
   /**
    * @return userdata ArrayList<Float>
@@ -35,7 +35,7 @@ public class Reader {
    * Code on how to handle exceptions from W3 Schools "Java Exceptions - Try...Catch"
    * https://www.w3schools.com/java/java_try_catch.asp
    */
-  public static ArrayList<Float> get_userdata() {
+  public ArrayList<Float> get_userdata() {
     System.out.println("This program generates a list of user input numbers. Numbers are added one at a time. To end the list enter a blank line.");
 
     // Initiate empty ArrayList

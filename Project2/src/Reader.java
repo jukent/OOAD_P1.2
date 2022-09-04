@@ -9,7 +9,7 @@ package src;
 
 import java.util.Scanner;
 
-public class Reader {
+class Reader {
     
   
     /**
@@ -17,7 +17,7 @@ public class Reader {
      * 
      * This method reads a string from the console input.
      */
-    public static String read() {   
+    public String read() {   
         Scanner scanner = new Scanner(System.in); 
         System.out.println("Enter a string: ");
         

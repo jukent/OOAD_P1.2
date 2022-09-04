@@ -7,10 +7,12 @@ public class Main {
      * and prints the final string to the console output.
      */
     public static void main(String args[]) {
-        String str = Reader.read();
+        Reader reader = new Reader();
+        String str = reader.read();
 
         System.out.println("Cleaning, Sorting, and Making a Palindrome . . .");
-        String str_processed = Processor.process(str);
+        Processor processor = new Processor();
+        String str_processed = processor.process(str);
 
         System.out.println(str_processed);
     }

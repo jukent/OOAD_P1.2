@@ -25,7 +25,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class Analyzer {
+class Analyzer {
  
 
     /**
@@ -46,7 +46,7 @@ public class Analyzer {
      *   middle_index = 2
      *   userdata.get(middle_index) = 3
      */
-    private static float calc_median(ArrayList<Float> userdata) {
+    private float calc_median(ArrayList<Float> userdata) {
         // Defining float variable `median` so it is accessible outside of the if/else scope.
         float median;
 
@@ -82,7 +82,7 @@ public class Analyzer {
      *   sum / length = 3
      * 
      */
-    private static float calc_mean(ArrayList<Float> userdata) {
+    private float calc_mean(ArrayList<Float> userdata) {
         int length = userdata.size();
 
         float mean = 0;
@@ -106,7 +106,7 @@ public class Analyzer {
      * 
      * If no entries are repeated, then there is no mode.
      */
-    private static ArrayList<Float> calc_mode(ArrayList<Float> userdata) {
+    private ArrayList<Float> calc_mode(ArrayList<Float> userdata) {
         Hashtable<Float, Integer> max_occurances = calc_max_occurances(userdata);
 
         Enumeration<Float> keys = max_occurances.keys();
@@ -136,7 +136,7 @@ public class Analyzer {
      * 
      * If there are no modes, this is printed.
      */
-    private static void print_mode(ArrayList<Float> mode_list) {
+    private void print_mode(ArrayList<Float> mode_list) {
         int length = mode_list.size();
         if (length ==0) {
             System.out.println("Mode: There is no mode.");
@@ -154,7 +154,7 @@ public class Analyzer {
      * 
      * This method calculates the variance of an ArrayList of Floats as a Float.
      */
-    private static float calc_variance(ArrayList<Float> userdata) {
+    private float calc_variance(ArrayList<Float> userdata) {
         int length = userdata.size();
         float mean = calc_mean(userdata);
 
@@ -174,7 +174,7 @@ public class Analyzer {
      * 
      * This method calculates the standard deviation of an ArrayList of Floats as a Float.
      */
-    private static double calc_sdev(ArrayList<Float> userdata) {
+    private double calc_sdev(ArrayList<Float> userdata) {
         float variance = calc_variance(userdata);
 
         // Using Math for square root calculation
@@ -191,7 +191,7 @@ public class Analyzer {
      * This method runs through elements in an ArrayLis of FLoats.
      * If each element is smaller than current minimum, it is set as the new minimum.
      */
-    private static float calc_min(ArrayList<Float> userdata) {
+    private float calc_min(ArrayList<Float> userdata) {
         int length = userdata.size();
 
         float min = userdata.get(0);
@@ -211,7 +211,7 @@ public class Analyzer {
      * This method runs through elements in ArrayList of Floats.
      * If each element is larger than current maximum, it is set as the new maximum.
      */
-    private static float calc_max(ArrayList<Float> userdata) {
+    private float calc_max(ArrayList<Float> userdata) {
         int length = userdata.size();
 
         float max = userdata.get(0);
@@ -240,7 +240,7 @@ public class Analyzer {
      * Assuming that if multiple values equally and maximally occuring, 
      * the desired behavior is to print all these value-count pairs.
      */
-    private static Hashtable<Float, Integer> calc_occurances(ArrayList<Float> userdata) {
+    private Hashtable<Float, Integer> calc_occurances(ArrayList<Float> userdata) {
         int length = userdata.size();
         Collections.sort(userdata);
         Hashtable<Float, Integer> occurances = new Hashtable<Float, Integer>();
@@ -291,7 +291,7 @@ public class Analyzer {
      * Code adapted from Stack Overflow
      * https://stackoverflow.com/a/10005160
      */
-    private static Hashtable<Float, Integer> calc_max_occurances(ArrayList<Float> userdata) {
+    private Hashtable<Float, Integer> calc_max_occurances(ArrayList<Float> userdata) {
         Hashtable<Float, Integer> occurances = calc_occurances(userdata);
 
         Hashtable<Float, Integer> max_occurances = new Hashtable<Float, Integer>();
@@ -322,7 +322,7 @@ public class Analyzer {
      * Code on printing a Hashtable from JavaCodeExamples "Print Hashtable in Java Example"
      * https://www.javacodeexamples.com/print-hashtable-in-java-example/3154
      */
-    private static void print_max_occurances(Hashtable<Float, Integer> max_occurances) {
+    private void print_max_occurances(Hashtable<Float, Integer> max_occurances) {
         Iterator<Entry<Float, Integer>> itr = max_occurances.entrySet().iterator();
         Map.Entry<Float, Integer> entry = null;
         while(itr.hasNext()){
@@ -348,7 +348,7 @@ public class Analyzer {
      * This method prints the result of the desired operations in turn either in one line
      * for or by calling up a print method (done for mode and maximum occurances).
      */
-    public static void analyze(ArrayList<Float> userdata) {
+    public void analyze(ArrayList<Float> userdata) {
         System.out.println("Beginning statistical analysis of list . . .");
 
         float median = calc_median(userdata);

@@ -13,7 +13,7 @@ package src;
 import java.util.Arrays;
 
 
-public class Processor {
+class Processor {
 
 
     /**
@@ -35,7 +35,7 @@ public class Processor {
      * 
      * `str_cleaned.replaceAll(" ", "")` Doesn't seem to work for me so I'm going to use an if test.
      */
-    private static String clean(String str) {   
+    private String clean(String str) {   
         String str_cleaned = new String();
         for (int i =0; i< str.length(); i++) {
             char char_upper = Character.toUpperCase(str.charAt(i));
@@ -59,7 +59,7 @@ public class Processor {
      * Learned that this was as simple as calling `Arrays.sort()` from TutorialsPoint
      * https://www.tutorialspoint.com/how-to-sort-a-string-in-java-alphabetically-in-java
      */
-    private static String sort(String str) {   
+    private String sort(String str) {   
         char[] charArray = str.toCharArray();
         Arrays.sort(charArray); 
         String str_sorted = new String(charArray);
@@ -87,7 +87,7 @@ public class Processor {
      * Changed method name from `palindrome()` to make it a verb
      * 
      */
-    private static String make_palindrome(String str) {    
+    private String make_palindrome(String str) {    
         int length = str.length();
 
         // Since adding characters to beginning of string, need to make separate String objects 
@@ -109,7 +109,7 @@ public class Processor {
      * 
      * This method loops through cleaning, sorting, and making a palindrome of a string.
      */
-    public static String process(String str) {
+    public String process(String str) {
         String str_cleaned = clean(str);
         String str_sorted = sort(str_cleaned);
         String str_palindromed = make_palindrome(str_sorted);
