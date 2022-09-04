@@ -1,0 +1,15 @@
+// Results with my name
+
+Enter a string: 
+Julia Kent
+Cleaning, Sorting, and Making a Palindrome . . .
+AEIJKLNTUTNLKJIEA
+
+---------------------------------------------
+
+// Results with Bruce
+
+Enter a string: 
+Bruce
+Cleaning, Sorting, and Making a Palindrome . . .
+BCERURECB
