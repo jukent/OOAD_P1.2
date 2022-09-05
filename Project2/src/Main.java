@@ -10,10 +10,7 @@ public class Main {
         StringReader reader = new StringReader();
         String str = reader.read();
 
-        System.out.println("Cleaning, Sorting, and Making a Palindrome . . .");
         Processor processor = new Processor();
-        String str_processed = processor.process(str);
-
-        System.out.println(str_processed);
+        processor.process(str);
     }
 }

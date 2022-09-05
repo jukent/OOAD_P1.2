@@ -87,7 +87,7 @@ class Processor {
      * Changed method name from `palindrome()` to make it a verb
      * 
      */
-    private String make_palindrome(String str) {    
+    private String make_palindrome(String str) {   
         int length = str.length();
 
         // Since adding characters to beginning of string, need to make separate String objects 
@@ -109,10 +109,13 @@ class Processor {
      * 
      * This method loops through cleaning, sorting, and making a palindrome of a string.
      */
-    public String process(String str) {
+    public void process(String str) {
+        System.out.println("Cleaning, Sorting, and Making a Palindrome . . .");
+
         String str_cleaned = clean(str);
         String str_sorted = sort(str_cleaned);
         String str_palindromed = make_palindrome(str_sorted);
-        return str_palindromed;
+
+        System.out.println(str_palindromed);
     }
 }

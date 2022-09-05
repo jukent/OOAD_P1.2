@@ -18,6 +18,8 @@ class StringReader {
      * This method reads a string from the console input.
      */
     public String read() {   
+        System.out.println("This program performs string manipulation.");
+
         Scanner scanner = new Scanner(System.in); 
         System.out.println("Enter a string: ");
         
