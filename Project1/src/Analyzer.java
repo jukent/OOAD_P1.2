@@ -302,7 +302,8 @@ class Analyzer {
         while(itr.hasNext()){
             entry = itr.next();
             if(entry.getValue() > maxCount) {
-                max_occurances.clear(); /* New max remove all current max occurances */
+                // If there is a new max, remove all values previously thought to be the max from Hasthtable
+                max_occurances.clear();
                 maxCount = entry.getValue();
                 max_occurances.put(entry.getKey(), entry.getValue());
             } else if(entry.getValue() == maxCount) {
@@ -327,6 +328,7 @@ class Analyzer {
         Map.Entry<Float, Integer> entry = null;
         while(itr.hasNext()){
             entry = itr.next();
+            // Prints multiple lines for each instance of max_occurances
             System.out.println("Maximum Occurances: Value " + entry.getKey() + ", Count " + entry.getValue() );
         }
     }
