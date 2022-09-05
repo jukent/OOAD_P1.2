@@ -1,5 +1,6 @@
 // Results with my name
 
+This program performs string manipulation.
 Enter a string: 
 Julia Kent
 Cleaning, Sorting, and Making a Palindrome . . .
@@ -8,6 +9,7 @@ UTNLKJIEAEIJKLNTU
 ---------------------------------------------
 // Results with Bruce
 
+This program performs string manipulation.
 Enter a string: 
 Bruce
 Cleaning, Sorting, and Making a Palindrome . . .
