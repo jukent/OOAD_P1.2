@@ -58,6 +58,7 @@ The trickiest operator to execute was the `calc_max_occurances()` and related me
    |   | - clean()
    |   | - sort()
    |   | - make_palindrome()
+   |   | - process()
    | - Main.java
    |   | - main()
 </pre>
